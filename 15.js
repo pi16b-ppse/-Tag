@@ -43,6 +43,6 @@ function swap(arr,i1,j1,i2,j2){
 var LEFT = 37, UP = 38, RIGHT = 39, DOWN = 40; //Объявляем переменные клавиш
 
 window.onload = function () {  
-  document.body.onkeydown = function (e){
-	   var e = e || window.event,
-	   keyCode = e.keyCode;
+  document.body.onkeydown = function (e1){
+	   var e2 = e2 || window.event,
+	   keyCode = e1.keyCode;
