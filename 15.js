@@ -51,3 +51,14 @@ var el = e.srcElement || e.target;
 			ei = i;
 			ej = j;
 	var q = true;
+	//Проверка комбинации ячеек
+	for(i = 0; i &lt; 4; ++i)
+		for(j = 0; j &lt; 4; ++j)
+			if(i + j != 6 &amp;&amp;
+			document.getElementById(i + " " + j).innerHTML != i*4 + j + 1){
+				q = false;
+				break;
+		}
+	if(q) alert("Victory!");
+	}
+}
