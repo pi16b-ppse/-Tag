@@ -44,3 +44,5 @@ var LEFT = 37, UP = 38, RIGHT = 39, DOWN = 40; //Объявляем переме
 
 window.onload = function () {  
   document.body.onkeydown = function (e){
+	   var e = e || window.event,
+	   keyCode = e.keyCode;
