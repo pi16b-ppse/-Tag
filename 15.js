@@ -39,3 +39,10 @@ function swap(arr,i1,j1,i2,j2){
 		arr[i1][j1] = arr[i2][j2];
 		arr[i2][j2] = t;
 }
+
+function cellClick(e){				
+var el = e.srcElement || e.target;
+	//получаем номер строки и столбца, на пересечении которых расположена ячейка. 
+	var i = el.id.charAt(0),
+	j = el.id.charAt(2);
+	
