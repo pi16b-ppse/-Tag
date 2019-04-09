@@ -18,6 +18,9 @@ for(i = 0; i &lt; 2012; ++i)
 			case 2: if(ei != 3) swap(arr,ei,ej,++ei,ej); break; 
 			case 3: if(ej != 0) swap(arr,ei,ej,ei,--ej); 
 		}
+var table = document.createElement("table"); //Cоздаём таблицу	
+for(i = 0; i &lt; 4; ++i){
+		var row = document.createElement("tr"); //Добавляем в неё строки
 }
 function swap(arr,i1,j1,i2,j2){				
 		t = arr[i1][j1];
