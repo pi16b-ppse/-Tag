@@ -21,6 +21,18 @@ for(i = 0; i &lt; 2012; ++i)
 var table = document.createElement("table"); //Cоздаём таблицу	
 for(i = 0; i &lt; 4; ++i){
 		var row = document.createElement("tr"); //Добавляем в неё строки
+		for(j = 0; j &lt; 4; ++j){
+			var cell = document.createElement("td");//Cоздаём ячейки
+			cell.id = i + " " + j; // Привязываем к событию cell click
+			cell.onclick = cellClick; //Записываем в ячейку соответсвующий эл-т массива
+			cell.innerHTML = arr[i][j];
+			row.appendChild(cell);// Добавляем ячейку в строку
+		}
+	table.appendChild(row);// Добавляем строку в итаблицу			
+}
+if(box.childNodes.length == 1) //Проверка на состояние таблицы
+box.removeChild(box.firstChild); //Удаляем таблицу, если она есть	
+box.appendChild(table);// Запихиваем в box table</div>
 }
 function swap(arr,i1,j1,i2,j2){				
 		t = arr[i1][j1];
