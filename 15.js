@@ -39,3 +39,5 @@ function swap(arr,i1,j1,i2,j2){
 		arr[i1][j1] = arr[i2][j2];
 		arr[i2][j2] = t;
 }
+
+var LEFT = 37, UP = 38, RIGHT = 39, DOWN = 40; //Объявляем переменные клавиш
