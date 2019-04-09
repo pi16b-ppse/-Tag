@@ -45,4 +45,9 @@ var el = e.srcElement || e.target;
 	//получаем номер строки и столбца, на пересечении которых расположена ячейка. 
 	var i = el.id.charAt(0),
 	j = el.id.charAt(2);
-	
+		if((i == ei &amp;&amp; Math.abs(j - ej) == 1) || (j == ej &amp;&amp; Math.abs(i - ei) == 1)){
+		document.getElementById(ei + " " + ej).innerHTML = el.innerHTML;
+		el.innerHTML = "";//Запоминаем положение пустой ячейки
+			ei = i;
+			ej = j;
+	var q = true;
