@@ -52,10 +52,10 @@ var el = e.srcElement || e.target;
 			ej = j;
 	var q = true;
 	//Проверка комбинации ячеек
-	for(i = 0; i &lt; 9; ++i)
-		for(j = 0; j &lt; 9; ++j)
+	for(i = 0; i &lt; 5; ++i)
+		for(j = 0; j &lt; 5; ++j)
 			if(i + j != 6 &amp;&amp;
-			document.getElementById(i + " " + j).innerHTML != i*9 + j + 1){
+			document.getElementById(i + " " + j).innerHTML != i*5 + j + 1){
 				q = false;
 				break;
 		}
