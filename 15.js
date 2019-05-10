@@ -1,4 +1,4 @@
-function newGame(){
+﻿function newGame(){
 var arr = [];
 for(i = 0; i &lt; 4; ++i){
 		arr[i] = [];
@@ -52,10 +52,10 @@ var el = e.srcElement || e.target;
 			ej = j;
 	var q = true;
 	//Проверка комбинации ячеек
-	for(i = 0; i &lt; 4; ++i)
-		for(j = 0; j &lt; 4; ++j)
+	for(i = 0; i &lt; 9; ++i)
+		for(j = 0; j &lt; 9; ++j)
 			if(i + j != 6 &amp;&amp;
-			document.getElementById(i + " " + j).innerHTML != i*4 + j + 1){
+			document.getElementById(i + " " + j).innerHTML != i*9 + j + 1){
 				q = false;
 				break;
 		}
