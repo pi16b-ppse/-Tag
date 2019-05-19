@@ -62,3 +62,8 @@ var el = e.srcElement || e.target;
 	if(q) alert("Victory!");
 	}
 }
+window.onload = function() {
+		box = document.getElementById("box");
+			newGame();				
+			document.getElementById("reset").onclick = newGame;
+}
