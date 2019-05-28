@@ -42,47 +42,47 @@ function newGame(){
 	    }
 	}
     }
-        ei = 3;
-	ej = 3;
-	for(i = 0; i < 1600; ++i){
-	    switch(Math.round(3*Math.random())){
-		case 0:
-	            if(ei != 0){ 
-		        swap(arr,ei,ej,--ei,ej);
-		    } 
-	            break; // up
-		case 1: 
-		    if(ej != 3){ 
-		        swap(arr,ei,ej,ei, ++ej);
-		    } 
-		    break; // right
-		case 2: 
-		    if(ei != 3){ 
-		        swap(arr,ei,ej,++ei,ej);
-		    } 
-	            break; // down
-		case 3: 
-	            if(ej != 0){ 
-		        swap(arr,ei,ej,ei,--ej);
-		    } // left
-	    }
+    ei = 3;
+    ej = 3;
+    for(i = 0; i < 1600; ++i){
+        switch(Math.round(3*Math.random())){
+	    case 0:
+	        if(ei != 0){ 
+		    swap(arr,ei,ej,--ei,ej);
+		} 
+	        break; // up
+	    case 1: 
+	        if(ej != 3){ 
+		    swap(arr,ei,ej,ei, ++ej);
+		} 
+		break; // right
+            case 2: 
+	        if(ei != 3){ 
+		    swap(arr,ei,ej,++ei,ej);
+		} 
+	        break; // down
+            case 3: 
+	        if(ej != 0){ 
+		    swap(arr,ei,ej,ei,--ej);
+		} // left
 	}
-	var table = document.createElement("table"),
-	tbody = document.createElement("tbody");					
-	table.appendChild(tbody);
-	for(i = 0; i < 4; ++i){
-	    var row = document.createElement("tr");
-	    for(j = 0; j < 4; ++j){
-	        var cell = document.createElement("td");
-		cell.id = i + " " + j;
-		cell.onclick = cellClick;
-		cell.innerHTML = arr[i][j];
-		row.appendChild(cell);
-	    }
-	        tbody.appendChild(row);					
+    }
+    var table = document.createElement("table"),
+    tbody = document.createElement("tbody");					
+    table.appendChild(tbody);
+    for(i = 0; i < 4; ++i){
+        var row = document.createElement("tr");
+	for(j = 0; j < 4; ++j){
+	    var cell = document.createElement("td");
+            cell.id = i + " " + j;
+	    cell.onclick = cellClick;
+	    cell.innerHTML = arr[i][j];
+	    row.appendChild(cell);
 	}
-	if(box.childNodes.length == 1){
-		box.removeChild(box.firstChild);	
+	tbody.appendChild(row);					
+    }
+    if(box.childNodes.length == 1){
+        box.removeChild(box.firstChild);	
 	box.appendChild(table);	
-	}
+    }
 }
