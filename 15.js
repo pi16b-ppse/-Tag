@@ -52,22 +52,17 @@ function newGame(){
         box.appendChild(table);// Запихиваем в box table</div>
     }
 }	    
+var arr = [], box, ei,ej;						
 function swap(arr,i1,j1,i2,j2){				
     t = arr[i1][j1];
-    arr[i1][j1] = arr[i2][j2];
-    arr[i2][j2] = t;
+	  arr[i1][j1] = arr[i2][j2];
+	  arr[i2][j2] = t;
 }
-    var arr = [], box, ei,ej;						
-    function swap(arr,i1,j1,i2,j2){				
-        t = arr[i1][j1];
-	      arr[i1][j1] = arr[i2][j2];
-	      arr[i2][j2] = t;
-    }
-    window.onload = function() {				
-	      box = document.getElementById("box");
-	      newGame();				
-        document.getElementById("reset").onclick = newGame;						
-    }
+window.onload = function() {				
+    box = document.getElementById("box");
+	  newGame();				
+    document.getElementById("reset").onclick = newGame;						
+}
 function cellClick(event) {
     var event = event || window.event,
     el = event.srcElement || event.target,
