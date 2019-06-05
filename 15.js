@@ -71,9 +71,9 @@ function newGame(){
 *@param {object} j2 - Элемент массива
 */						
 function swap(arr,i1,j1,i2,j2){				
-        t = arr[i1][j1];
-        arr[i1][j1] = arr[i2][j2];
-        arr[i2][j2] = t;
+    t = arr[i1][j1];
+    arr[i1][j1] = arr[i2][j2];
+    arr[i2][j2] = t;
 }
 
 /**
