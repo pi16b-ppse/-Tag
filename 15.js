@@ -77,7 +77,7 @@ function newGame(){
     }
     ei = 3;//Запоминаем индексы элемента массива,
     ej = 3;// в котором записана пустая строка.
-    for(i = 0; i < 1600; ++i)
+    for(i = 0; i < 1600; ++i){
         switch(Math.round(3*Math.random())){
             case 0:
                 if(ei != 0){
@@ -99,7 +99,8 @@ function newGame(){
                     swap(arr,ei,ej,ei,--ej); 
                 }
                 break; 
-		}
+         }
+    }
     var table = document.createElement("table"); //Cоздаём таблицу	
     for(i = 0; i &lt; 4; ++i){
         var row = document.createElement("tr"); //Добавляем в неё строки
