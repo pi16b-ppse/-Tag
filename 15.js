@@ -16,7 +16,7 @@ function newGame(){
     ei = 3;//Запоминаем индексы элемента массива,
     ej = 3;// в котором записана пустая строка.
     for(i = 0; i &lt; 2012; ++i){ 
-        switch(Math.round(3*Math.random())){ // Случайным образом выбираем число от 0 до 3				
+        switch(Math.round(3*Math.random())){ // Случайным образом выбираем число от 0 до 3			
             case 0:
                 if(ei != 0){
                     swap(arr,ei,ej,--ei,ej);
@@ -39,8 +39,6 @@ function newGame(){
                 break; 
         }
 
-
-
     }
     var table = document.createElement("table"); //Cоздаём таблицу	
     for(i = 0; i &lt; 4; ++i){
@@ -52,16 +50,15 @@ function newGame(){
             cell.innerHTML = arr[i][j];
             row.appendChild(cell);// Добавляем ячейку в строку
         }
-
         table.appendChild(row);// Добавляем строку в итаблицу			
     }
     if(box.childNodes.length == 1){ //Проверка на состояние таблицы
         box.removeChild(box.firstChild); //Удаляем таблицу, если она есть	
         box.appendChild(table);// Запихиваем в box table</div>
     }
-
 }
 
+/**
 *@description Базовые переменные, используемые при начале новой игры
 */	    
 var arr = [], box, ei,ej;	
@@ -74,7 +71,6 @@ var arr = [], box, ei,ej;
 *@param {object} i2 - Элемент массива
 *@param {object} j2 - Элемент массива
 */						
-
 function swap(arr,i1,j1,i2,j2){				
     t = arr[i1][j1];
     arr[i1][j1] = arr[i2][j2];
@@ -88,7 +84,7 @@ function swap(arr,i1,j1,i2,j2){
 window.onload = function() {				
     box = document.getElementById("box");
     newGame();				
-    document.getElementById("reset").onclick = newGame;						
+    document.getElementById("reset").onclick = newGame;
 }
 
 /**
