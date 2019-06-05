@@ -1,3 +1,6 @@
+/**
+* Параметры используемые при начале новой игры
+*/
 function newGame(){
     var arr = [];
     for(i = 0; i &lt; 4; ++i){
@@ -35,8 +38,9 @@ function newGame(){
                 }
                 break; 
         }
+
     }
- var table = document.createElement("table"); //Cоздаём таблицу	
+    var table = document.createElement("table"); //Cоздаём таблицу	
     for(i = 0; i &lt; 4; ++i){
         var row = document.createElement("tr"); //Добавляем в неё строки
         for(j = 0; j &lt; 4; ++j){
@@ -53,17 +57,40 @@ function newGame(){
         box.appendChild(table);// Запихиваем в box table</div>
     }
 }
-var arr = [], box, ei,ej;						
+
+/**
+*@description Базовые переменные, используемые при начале новой игры
+*/	    
+var arr = [], box, ei,ej;	
+
+/**
+* Функция меняющая местами два элемента массива с заданными индексами.
+*@param {object} arr - Массив ячеек
+*@param {object} i1 - Элемент массива
+*@param {object} j1 - Элемент массива
+*@param {object} i2 - Элемент массива
+*@param {object} j2 - Элемент массива
+*/						
 function swap(arr,i1,j1,i2,j2){				
     t = arr[i1][j1];
     arr[i1][j1] = arr[i2][j2];
     arr[i2][j2] = t;
 }
+
+
+/**
+*Функция загрузки начальной страницы игры
+*/
 window.onload = function() {				
     box = document.getElementById("box");
     newGame();				
-    document.getElementById("reset").onclick = newGam				
+    document.getElementById("reset").onclick = newGame;
 }
+
+/**
+* Функция для обработки нажатий на костяшки
+*@param {var} event - Ячейка
+*/
 function cellClick(event) {
     var event = event || window.event,
     el = event.srcElement || event.target,
