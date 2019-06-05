@@ -39,6 +39,8 @@ function newGame(){
                 break; 
         }
 
+
+
     }
     var table = document.createElement("table"); //Cоздаём таблицу	
     for(i = 0; i &lt; 4; ++i){
@@ -50,12 +52,14 @@ function newGame(){
             cell.innerHTML = arr[i][j];
             row.appendChild(cell);// Добавляем ячейку в строку
         }
+
         table.appendChild(row);// Добавляем строку в итаблицу			
     }
     if(box.childNodes.length == 1){ //Проверка на состояние таблицы
         box.removeChild(box.firstChild); //Удаляем таблицу, если она есть	
         box.appendChild(table);// Запихиваем в box table</div>
     }
+
 }
 
 *@description Базовые переменные, используемые при начале новой игры
@@ -70,11 +74,13 @@ var arr = [], box, ei,ej;
 *@param {object} i2 - Элемент массива
 *@param {object} j2 - Элемент массива
 */						
+
 function swap(arr,i1,j1,i2,j2){				
     t = arr[i1][j1];
     arr[i1][j1] = arr[i2][j2];
     arr[i2][j2] = t;
 }
+
 
 /**
 *Функция загрузки начальной страницы игры
